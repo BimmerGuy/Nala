@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#070914" />
+  <meta name="description" content="NALA helps you see what is safe to spend, understand where your money went, plan what comes next, and build better money habits." />
+  <meta property="og:title" content="NALA — Make your money last" />
+  <meta property="og:description" content="A clearer way to understand, plan and improve your money." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <title>NALA — Make your money last</title>
+  <link rel="preload" as="image" href="assets/screen-home.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <canvas class="space" id="space" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-line" id="scrollLine" aria-hidden="true"></div>
+
+  <header class="nav-wrap" id="top">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="NALA home">
+        <img src="assets/nala-logo.png" alt="NALA" width="126" height="72" />
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#product">Product</a>
+        <a href="#brain">NALA Brain</a>
+        <a href="#together">Together</a>
+        <a href="#how">How it works</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button theme-button" id="themeButton" type="button" aria-label="Switch color theme">
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M18.36 5.64l-1.42 1.42M7.06 16.94l-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.2A8.4 8.4 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"/></svg>
+        </button>
+        <a class="nav-cta magnetic" href="#waitlist">Early access</a>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell" id="hero">
+      <div class="hero-copy">
+        <div class="eyebrow enter" style="--delay:.05s"><span></span> Money, made understandable</div>
+        <h1 class="enter" style="--delay:.12s">Know what’s safe.<br><em>Make your money last.</em></h1>
+        <p class="hero-lead enter" style="--delay:.18s">NALA turns everyday money into a clear next move — what came in, what went out, what needs protection, and what you can safely use today.</p>
+        <div class="hero-actions enter" style="--delay:.24s">
+          <button class="store-button magnetic" type="button" data-toast="NALA is coming soon to the App Store">
+            <span class="store-logo apple"></span><span><small>Coming soon to the</small><strong>App Store</strong></span>
+          </button>
+          <button class="store-button magnetic" type="button" data-toast="NALA is coming soon to Google Play">
+            <span class="store-logo play"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 5.5v29L25.8 20 7 5.5Z"/><path d="m25.8 20 6.2-4.8 3.9 2.3c1.6.9 1.6 2.1 0 3L32 22.8 25.8 20Z"/></svg></span><span><small>Coming soon to</small><strong>Google Play</strong></span>
+          </button>
+        </div>
+        <div class="hero-metrics enter" style="--delay:.3s">
+          <div><strong>10 sec</strong><span>to understand the home screen</span></div>
+          <div><strong>4 modes</strong><span>Adult · Family · Teen · Kids</span></div>
+          <div><strong>1 purpose</strong><span>Better money decisions</span></div>
+        </div>
+      </div>
+
+      <div class="hero-product enter" style="--delay:.16s" id="heroProduct">
+        <div class="hero-aura" aria-hidden="true"></div>
+        <div class="phone-stage" id="phoneStage">
+          <div class="device side-device side-left" data-device-depth=".3">
+            <div class="device-shell"><div class="dynamic-island"></div><img src="assets/screen-money.webp" alt="NALA Money screen" loading="eager" decoding="async" /></div>
+          </div>
+          <div class="device main-device" data-device-depth="1">
+            <div class="device-shell"><div class="dynamic-island"></div><img id="heroScreen" src="assets/screen-home.webp" alt="NALA Home screen" loading="eager" decoding="async" /></div>
+          </div>
+          <div class="device side-device side-right" data-device-depth=".35">
+            <div class="device-shell"><div class="dynamic-island"></div><img src="assets/screen-plan.webp" alt="NALA Plan screen" loading="eager" decoding="async" /></div>
+          </div>
+        </div>
+        <div class="screen-switch" role="tablist" aria-label="Preview NALA screens">
+          <button class="active" data-screen="home" role="tab">Home</button>
+          <button data-screen="money" role="tab">Money</button>
+          <button data-screen="plan" role="tab">Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise shell reveal" aria-label="NALA promise">
+      <div><span>01</span><strong>See what’s safe</strong></div>
+      <div><span>02</span><strong>Understand your month</strong></div>
+      <div><span>03</span><strong>Protect what matters</strong></div>
+      <div><span>04</span><strong>Move smarter</strong></div>
+    </section>
+
+    <section class="story shell" id="story">
+      <div class="story-copy reveal">
+        <span class="section-label">Why NALA exists</span>
+        <h2>The problem isn’t always income.<br><em>Sometimes it’s clarity.</em></h2>
+        <p>Rent. Transport. Debt. Groceries. Family. Data. Small purchases. The month keeps moving whether your balance is ready or not. NALA turns that noise into one understandable plan.</p>
+      </div>
+      <div class="story-flow reveal" data-stagger>
+        <article class="story-card interactive-card"><span>01 · Money comes in</span><strong>R7,400</strong><p>It feels available.</p></article>
+        <div class="story-arrow" aria-hidden="true">→</div>
+        <article class="story-card interactive-card alert"><span>02 · Life happens</span><strong>−R6,600</strong><p>Bills, transport, debt and everyday spending.</p></article>
+        <div class="story-arrow" aria-hidden="true">→</div>
+        <article class="story-card interactive-card clarity"><span>03 · NALA clarifies</span><strong>R800 safe</strong><p>R200 per day until payday.</p></article>
+      </div>
+    </section>
+
+    <section class="product shell" id="product">
+      <div class="section-heading reveal">
+        <span class="section-label">The home screen</span>
+        <h2>One dashboard.<br><em>No financial fog.</em></h2>
+        <p>Safe to Spend stays first. The dashboard underneath explains where money went without turning your finances into homework.</p>
+      </div>
+      <div class="product-grid">
+        <article class="dashboard-card spotlight reveal" id="dashboardCard">
+          <header><div><small>This month</small><h3>Money overview</h3></div><span class="status"><i></i> On track</span></header>
+          <div class="dash-top">
+            <div class="donut" aria-label="Illustrative monthly spending chart"><div class="donut-hole"><strong>R6,600</strong><span>spent</span></div></div>
+            <div class="legend">
+              <div><i class="red"></i><span>Debt</span><strong>R3,950</strong></div>
+              <div><i class="teal"></i><span>Bills</span><strong>R2,250</strong></div>
+              <div><i class="blue"></i><span>Transport</span><strong>R300</strong></div>
+              <div><i class="grey"></i><span>Savings</span><strong>R100</strong></div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="flow-bars">
+            <div class="flow-row"><span>Income</span><div><b style="--w:100%;--color:#34b789"></b></div><strong>R7,400</strong></div>
+            <div class="flow-row"><span>Spent</span><div><b style="--w:89%;--color:#ff9f5a"></b></div><strong>R6,600</strong></div>
+            <div class="flow-row"><span>Protected</span><div><b style="--w:18%;--color:#845cff"></b></div><strong>R0</strong></div>
+            <div class="flow-row"><span>Debt</span><div><b style="--w:54%;--color:#ef5f68"></b></div><strong>R3,950</strong></div>
+          </div>
+        </article>
+        <div class="product-copy reveal" data-stagger>
+          <article class="feature-card interactive-card"><span class="feature-glyph">↗</span><div><small>Money</small><h3>Everything in one clear list</h3><p>Search what came in, what went out, and where it went.</p></div></article>
+          <article class="feature-card interactive-card"><span class="feature-glyph">◎</span><div><small>Plan</small><h3>Give every rand a job</h3><p>Manage bills, debt, goals, spending limits and important dates.</p></div></article>
+          <article class="feature-card interactive-card"><span class="feature-glyph">♢</span><div><small>Together</small><h3>Plan money with people</h3><p>Partner, family, household, friends, stokvel or trip.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how shell" id="how">
+      <div class="section-heading reveal">
+        <span class="section-label">How it works</span>
+        <h2>Three steps.<br><em>Then NALA does the thinking.</em></h2>
+      </div>
+      <div class="steps" data-stagger>
+        <article class="step reveal"><span>01</span><div class="step-icon">↓</div><h3>Tell NALA what you have</h3><p>Add your available money and when you need it to last until.</p></article>
+        <article class="step reveal"><span>02</span><div class="step-icon">□</div><h3>Protect what matters</h3><p>Bills, debt, goals, savings and shared commitments come first.</p></article>
+        <article class="step reveal"><span>03</span><div class="step-icon">✦</div><h3>See the next move</h3><p>NALA calculates what’s safe and helps you understand the trade-offs.</p></article>
+      </div>
+    </section>
+
+    <section class="brain shell" id="brain">
+      <div class="brain-copy reveal">
+        <span class="section-label">NALA Brain</span>
+        <h2>Not a chatbot.<br><em>A money decision engine.</em></h2>
+        <p>NALA Brain looks at your Safe to Spend, spending pressure, debt, protected commitments and days until payday to help explain a decision using your own numbers.</p>
+        <ul>
+          <li><span>✦</span><div><strong>Affordability</strong><p>Understand the impact before buying.</p></div></li>
+          <li><span>✦</span><div><strong>Habit signals</strong><p>Spot where spending pressure is building.</p></div></li>
+          <li><span>✦</span><div><strong>Cash runway</strong><p>See how far the current plan can stretch.</p></div></li>
+        </ul>
+      </div>
+      <div class="brain-demo spotlight reveal">
+        <header><div class="brain-mark"><img src="assets/nala-mark.png" alt="" /></div><div><small>Interactive demo</small><strong>Can I afford it?</strong></div><span>Local intelligence</span></header>
+        <label for="purchase">Purchase amount</label>
+        <div class="amount"><span>R</span><input id="purchase" type="number" value="250" min="0" max="3000" step="50" inputmode="numeric" /></div>
+        <input id="purchaseRange" class="range" type="range" min="0" max="1200" step="50" value="250" aria-label="Purchase amount slider" />
+        <div class="brain-result" id="brainResult">
+          <span class="result-icon">✓</span>
+          <div><small>NALA says</small><strong>This fits your current plan.</strong><p>You would have <b>R550</b> left, or about <b>R137/day</b> for the next 4 days.</p></div>
+        </div>
+        <div class="demo-disclaimer">Illustrative website demo — the app uses your real numbers.</div>
+      </div>
+    </section>
+
+    <section class="together shell" id="together">
+      <div class="together-card reveal spotlight">
+        <div class="together-copy"><span class="section-label">NALA Together</span><h2>Money gets easier when the plan is shared.</h2><p>Build one clear plan with the people who matter without turning it into a spreadsheet.</p></div>
+        <div class="plan-pills" data-stagger>
+          <span class="reveal">♥ Partner</span><span class="reveal">⌂ Household</span><span class="reveal">◉ Family</span><span class="reveal">◇ Stokvel</span><span class="reveal">✈ Trip</span><span class="reveal">＋ Custom</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="modes shell" id="modes">
+      <div class="section-heading reveal"><span class="section-label">One NALA. Different lives.</span><h2>Adults don’t need kids’ finance.<br><em>Kids don’t need adult debt screens.</em></h2></div>
+      <div class="mode-tabs reveal" role="tablist"><button class="active" data-mode="adult">Adult</button><button data-mode="family">Family</button><button data-mode="teen">Teen</button><button data-mode="kids">Kids</button></div>
+      <div class="mode-panel reveal">
+        <div><span class="mode-kicker" id="modeKicker">Adult mode</span><h3 id="modeTitle">Full clarity without the complexity.</h3><p id="modeText">Safe to Spend, debt, bills, goals, budgets, money history, NALA Brain and personal planning.</p></div>
+        <div class="mode-list" id="modeList"><span>Safe to Spend</span><span>Debt & bills</span><span>Goals</span><span>NALA Brain</span></div>
+      </div>
+    </section>
+
+    <section class="waitlist shell" id="waitlist">
+      <div class="waitlist-card reveal spotlight">
+        <img src="assets/nala-logo.png" alt="NALA" width="160" height="90" loading="lazy" />
+        <span class="section-label">Coming soon</span>
+        <h2>Your money should make sense.</h2>
+        <p>NALA is being built to make everyday money clearer for adults, families, teens and kids.</p>
+        <div class="waitlist-actions">
+          <button class="store-button magnetic" type="button" data-toast="App Store launch is coming soon"><span class="store-logo apple"></span><span><small>Coming soon to the</small><strong>App Store</strong></span></button>
+          <button class="store-button magnetic" type="button" data-toast="Google Play launch is coming soon"><span class="store-logo play"><svg viewBox="0 0 40 40"><path d="M7 5.5v29L25.8 20 7 5.5Z"/><path d="m25.8 20 6.2-4.8 3.9 2.3c1.6.9 1.6 2.1 0 3L32 22.8 25.8 20Z"/></svg></span><span><small>Coming soon to</small><strong>Google Play</strong></span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><a class="footer-brand" href="#top"><img src="assets/nala-logo.png" alt="NALA" /></a><p>Make your money last.</p><a href="#top">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
